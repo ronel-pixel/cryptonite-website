@@ -78,17 +78,14 @@ export async function getAiRecommendation(
       choices?: Array<{ message?: { content?: string } }>;
       error?: { message?: string };
     }>(
-      OPENAI_CHAT_COMPLETIONS_URL,
+      'api/chat/',
       {
-        model,
-        messages: [{ role: 'user', content: prompt }],
-        max_tokens: 500,
+        messages: [{ role: 'user', content: prompt }] 
       },
       {
         timeout: 30000,
         headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json'
         },
       }
     );
