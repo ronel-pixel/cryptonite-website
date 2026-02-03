@@ -80,14 +80,12 @@ export default function AIRecommendation() {
 
       setRecommendationResult({
         content: normalizeAiContent(aiResponse?.content ?? ''),
-        error: aiResponse?.error != null ? String(aiResponse.error) : null,
+        error: aiResponse?.error != null ? 'We are having trouble reaching our AI consultant. Please try again in a few moments' : null,
       });
     } catch (error: unknown) {
-      const errorMessage =
-        error instanceof Error ? error.message : 'Failed to get recommendation';
       setRecommendationResult({
         content: '',
-        error: errorMessage,
+        error: 'AI Service is currently unavailable. Please check back shortly.',
       });
     } finally {
       setLoading(false);
