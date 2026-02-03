@@ -1,10 +1,6 @@
 import axios from 'axios';
 import { formatPriceForDisplay } from '../utils/validation';
-import {
-  getOpenAiApiKey,
-  getAiModel,
-  isOpenAiKeyConfigured,
-} from '../config/env';
+import { isOpenAiKeyConfigured } from '../config/env';
 
 if (import.meta.env.DEV && !isOpenAiKeyConfigured()) {
   console.error(
@@ -53,7 +49,6 @@ export interface AiRecommendationResult {
   error?: string;
 }
 
-const OPENAI_CHAT_COMPLETIONS_URL = 'https://api.openai.com/v1/chat/completions';
 
 /**
  * Sends market data to OpenAI Chat Completions API and returns the model's recommendation.
@@ -69,8 +64,7 @@ export async function getAiRecommendation(
     };
   }
 
-  const apiKey = getOpenAiApiKey();
-  const model = getAiModel();
+  
   const prompt = buildRecommendationPrompt(marketData);
 
   try {
