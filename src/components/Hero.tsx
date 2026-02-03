@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { useMemo, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, useMotionValueEvent, type Transition } from 'framer-motion';
+import { motion, useScroll, useTransform, type Transition } from 'framer-motion';
 
 /** Parallax source: src/assets/parallax-two. Layers: layer-0.png, layer-1.png, … (PNG/SVG). Attribution: html.attribution (required by license). */
 const PARALLAX_LAYERS_GLOB = import.meta.glob<{ default: string }>(
