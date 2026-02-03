@@ -1,5 +1,10 @@
 # Cryptonite by Enclave
 
+## Project Links:
+- **Live Deployment (Vercel):** https://cryptonite-website-mo1f.vercel.app/
+- **Source Code (GitHub):** https://github.com/ronel-pixel/cryptonite-website
+
+
 **A crypto portfolio tracker with real-time data and AI-powered financial insights.**
 
 Cryptonite delivers a premium experience for tracking cryptocurrencies: live market data, favorite coins, real-time reports with charts, and an AI recommendation engine that suggests Buy or No Buy based on current market metrics.
